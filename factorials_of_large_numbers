@@ -1,0 +1,30 @@
+import java.lang.*;
+import java.io.*;
+import java.util.*;
+import java.math.*;
+class Factrl
+{
+public static void main(String args[])
+{
+
+Scanner sc=new Scanner(System.in);
+int a=sc.nextInt();
+int[] ra=new int[a]; 
+if(a>0 && a<=100)
+{
+for(int i=0;i<a;i++)
+ ra[i]=sc.nextInt();
+for(int i=0;i<a;i++)
+{
+BigInteger bg= BigInteger.ONE;
+BigInteger val;
+for(int j=1;j<=ra[i];j++)
+{
+val=new BigInteger(""+j);
+bg=bg.multiply(val);
+}
+System.out.println(bg);
+} 
+}
+}
+}
